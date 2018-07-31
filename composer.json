@@ -1,0 +1,17 @@
+{
+    "name": "cblink/xiaowm",
+    "authors": [
+        {
+            "name": "MINGYOUNG",
+            "email": "mingyoungcheung@gmail.com"
+        }
+    ],
+    "require": {
+        "hanson/foundation-sdk": "^2.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cblink\\Xiaowm\\": "src/"
+        }
+    }
+}
