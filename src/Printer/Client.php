@@ -50,12 +50,7 @@ class Client extends AbstractAPI
 
     protected function post($url, $data)
     {
-        $response = $this->getHttp()->post($url, [
-            'headers' => [
-                'Content-Type' => 'application/json'
-            ],
-            'json' => array_merge(['app_key' => $this->app->config['app_key']], $data),
-        ]);
+        $response = $this->getHttp()->json($url, array_merge(['app_key' => $this->app->config['app_key']], $data));
 
         return json_decode((string) $response->getBody(), true);
     }
