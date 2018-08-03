@@ -57,6 +57,6 @@ class Client extends AbstractAPI
             'json' => array_merge(['app_key' => $this->app->config['app_key']], $data),
         ]);
 
-        return json_decode($response->getBody()->getContents(), true);
+        return json_decode((string) $response->getBody(), true);
     }
 }
